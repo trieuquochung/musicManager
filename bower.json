@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.6"
+  },
+  "dependencies": {
+    "angular": "~1.6",
+    "bootstrap": "~3.3.1",
+    "angular-route": "~1.6",
+    "angular-mocks": "~1.6",
+    "angular-material": "^1.1.4",
+    "font-awesome": "^4.7.0",
+    "i18next": "^8.4.3",
+    "ng-i18next": "^1.0.4"
+  },
+  "resolutions": {
+    "angular": "^1.4.8",
+    "i18next": "^8.4.3"
+  }
+}

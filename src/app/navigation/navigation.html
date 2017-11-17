@@ -1,0 +1,18 @@
+<div class="navigation">
+  <md-sidenav  class="md-sidenav-left"
+               md-component-id="left"
+               md-is-locked-open="$mdMedia('gt-xs')"
+               ng-cloak>
+    <md-content>
+      <md-list class="left-nav">
+        <md-list-item ng-class="{'selectListItem': vm.isSelectedSong()}" ng-click="vm.navigateToSong()">
+          <span>Songs</span>
+        </md-list-item>
+
+        <md-list-item ng-class="{'selectListItem': vm.isSelectedPlaylist()}" ng-click="vm.navigateToPlaylist()">
+          <span>Playlists</span>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+</div>

@@ -1,0 +1,61 @@
+<div class="edit-playlist" layout="column" flex="100">
+
+  <div class="edit-form" layout="column">
+    <h1>Edit Playlist</h1>
+    <form name="formEdit">
+      <div layout="row">
+        <md-input-container flex="100">
+          <input required name="currentPlaylist.name"
+                 ng-model="vm.cache.currentPlaylist.name"
+                 ng-minlength="1"
+                 ng-required="true"
+                  placeholder="Playlist Name">
+          <div ng-messages="vm.cache.currentPlaylist.$error">
+            <div ng-message="required" ng-class="{'hide-error-empty-name': (vm.cache.currentPlaylist.name.length > 0)}">
+              <p>Playlist name cannot be empty</p></div>
+          </div>
+        </md-input-container>
+      </div>
+      </br>
+
+      <div layout="row">
+        <md-input-container flex="100">
+          <input ng-model="vm.cache.currentPlaylist.creator" placeholder="Creator">
+        </md-input-container>
+      </div>
+    </form>
+
+    <div class="button-edit-playlist">
+      <section>
+        <md-button class="md-raised md-primary" ng-disabled="formEdit.$invalid" ng-click="vm.savePlaylist(vm.cache.currentPlaylist)">Save</md-button>
+        <md-button id="md-button-cancel" class="md-raised md-primary" ng-click="vm.goToTableView()">Cancel</md-button>
+      </section>
+    </div>
+  </div>
+
+  <div class="add-remove-song" layout="row" flex="70">
+
+    <div class="current-song-in-playlist" layout="column" flex="50" table-directive
+         output="vm.outputFromTableComponent"
+         data="vm.songsInPlaylist"
+         search-data="vm.searchPlaylist"
+         column="vm.columnSongInEditPlaylist"
+         selectedAllItem="vm.selectedAll"
+         show-action-columb="vm.showActionColumn">
+    </div>
+
+    <div>
+      <button>REMOVE</button>
+      <button>ADD</button>
+    </div>
+
+    <div class="all-song" layout="column" flex="50" table-directive
+         output="vm.outputFromTableComponent"
+         data="vm.songsNotInPlaylist"
+         search-data="vm.searchPlaylist"
+         column="vm.columnSongInEditPlaylist"
+         selectedAllItem="vm.selectedAll"
+         show-action-columb="vm.showActionColumn">
+    </div>
+  </div>
+</div>

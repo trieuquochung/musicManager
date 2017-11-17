@@ -1,0 +1,73 @@
+[
+  {
+    "selected": false,
+    "id": 1,
+    "name": "Sign Of The Times",
+    "artist": "Harry Styles"
+  },
+
+  {
+    "selected": false,
+    "id": 2,
+    "name": "My Love",
+    "artist": "Westlife"
+  },
+
+  {
+    "selected": false,
+    "id": 3,
+    "name": "Alone",
+    "artist": "Alone Walker"
+  },
+
+  {
+    "selected": false,
+    "id": 4,
+    "name": "Radioactive",
+    "artist": "Imagine Dragon"
+  },
+
+  {
+    "selected": false,
+    "id": 5,
+    "name": "Rolling In The Deep",
+    "artist": "Adele"
+  },
+
+  {
+    "selected": false,
+    "id": 6,
+    "name": "Waiting For Love",
+    "artist": "Avicii"
+  },
+
+  {
+    "selected": false,
+    "id": 7,
+    "name": "Stressed Out",
+    "artist": "Twenty One Pilots"
+  },
+
+  {
+    "selected": false,
+    "id": 8,
+    "name": "One Call Away",
+    "artist": "Charlie Puth"
+  },
+
+  {
+    "selected": false,
+    "id": 9,
+    "name": "Hit The Lights",
+    "artist": "Selena Gomez"
+  },
+
+  {
+    "selected": false,
+    "id": 10,
+    "name": "Firestone",
+    "artist": "Kygo"
+  }
+
+]
+

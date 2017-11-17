@@ -1,0 +1,65 @@
+<div class="table-component">
+  <table class="md-api-table">
+    <thead>
+    <tr>
+      <th class="thCheckBox">
+        <div class="checkBox">
+          <md-checkbox
+            aria-label=" "
+            ng-model="vm.selectedAllItem"
+            ng-change="vm.toggleAllItem()">
+          </md-checkbox>
+        </div>
+      </th>
+      <th ng-repeat="column in vm.column">
+        <span ng-class="{'column-properties': column.properties.sort }" ng-click="vm.sortBy(column.properties)">{{column.title}}</span>
+        <span ng-if=" vm.propertyName === column.properties.name">
+          <i ng-if = "column.properties.sort.ascending === 1" class="fa fa-arrow-down" aria-hidden="true"></i>
+          <i ng-if = "column.properties.sort.ascending === -1 " class="fa fa-arrow-up" aria-hidden="true"></i>
+        </span>
+      </th>
+      <th ng-if="vm.showActionColumn">Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="item in vm.data | filter: vm.searchData ">
+      <td class="tdCheckBox">
+        <div class="checkBox">
+          <md-checkbox
+            aria-label=" "
+            ng-model="item.selected"
+            ng-change="vm.toggleEachItem()">
+          </md-checkbox>
+        </div>
+      </td>
+
+      <td ng-repeat ="column in vm.column | orderBy:propertyName:reverse">
+        {{item[column.properties.name]}}
+      </td>
+
+      <td ng-if="vm.showActionColumn" class="action-column">
+
+        <div hide-xs class="button-edit-delete">
+          <md-button class="md-raised md-primary" ng-click="vm.editFunction(item)"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</md-button>
+          <md-button class="md-raised md-primary" ng-click="vm.deleteFunction(item)"><i class="fa fa-trash" aria-hidden="true"></i> Delete</md-button>
+        </div>
+
+        <div hide show-xs class="icon-edit-delete">
+          <md-button ng-click="vm.editButton(item)" class="md-icon-button" >
+            <md-icon aria-label=" " ><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+          <md-button ng-click="vm.deleteButton(item)" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-trash fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

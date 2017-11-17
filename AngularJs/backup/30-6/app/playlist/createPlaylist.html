@@ -1,0 +1,50 @@
+<div class="create-playlist" layout="row">
+    <div class="create-form" layout="column" flex="40">
+      <h1>Create Playlist</h1>
+
+      <form name="formCreate">
+        <div layout="row">
+          <md-input-container flex="100">
+            <input required name="currentPlaylist.name"
+                   ng-model="vm.currentPlaylist.name"
+                   ng-minlength="1"
+                   ng-required="true"
+                   placeholder="Playlist Name">
+            <div ng-messages="vm.currentPlaylist.$error">
+              <div ng-message="required" ng-class="{'hideError': (vm.currentPlaylist.name.length > 0)}">
+                <p>Playlist name cannot be empty</p>
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+        </br>
+
+        <div layout="row">
+          <md-input-container flex="100">
+            <input ng-model="vm.currentPlaylist.creator" placeholder="Creator">
+          </md-input-container>
+        </div>
+      </form>
+
+      <div class="buttonCreatePlaylist">
+        <div style="float: right">
+          <md-button class="md-raised md-primary" ng-disabled="formCreate.$invalid" ng-click="vm.createPlaylist(vm.currentPlaylist)">Create</md-button>
+          <md-button style="background-color: #757575" class="md-raised md-primary" ng-click="vm.goToTableView()">Cancel</md-button>
+        </div>
+      </div>
+
+    </div>
+
+    <div layout="column" flex="60">
+      <p> Select Song Add to Playlist</p>
+        <div class="select-song" table-directive
+          output="vm.outputFromTableComponent"
+          data="vm.listSong"
+          column="vm.columnSongInCreatePlaylist"
+          selected-all-item="vm.selectedAll"
+          show-action-columb="vm.showActionColumn">
+        </div>
+     </div>
+</div>
+
+

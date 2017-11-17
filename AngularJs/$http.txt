@@ -1,0 +1,53 @@
+﻿
+      //$http get JSON file (listSong)
+          var route = 'app/song/listSong.json'; // Get json file
+
+//inject cai service đó lên bên trên rồi dung
+        var callback = function(data){
+            vm.listSong = data.data;
+            console.log('vm.listSong', vm.listSong);
+//chay xong nay la het. ko hieu cho nao
+
+          //ham callback luc nao cung thuc thi het, goi controller la callback dc goi roi???
+          //ko, nhu ben tren la m chi co khoi tao no thoi chu chua goi
+          // goi la phai nhu nay moi la goi no ne:
+          //ok hieur roif ^^. ok con j nua. truoc mat la vay di, cos gi t nt skype may
+          uk ok thoi ngu ha. cphien m qua . ok bb  gG09kaka g9
+          callback(data);
+        }
+
+        exampleService.getListSong(route, callback);
+
+
+        //do, cai luong no lam viec nhu nay
+        //1. no se khoi tao cai ham callback, nhung ko chay ben trong  nha. chi la tao 1 dia chi o nho cho cai ham thoi
+        //chua thuc thi j ben trong het
+        //2. sau do no se goi cai ham getListSong trong service exampleService. No truyen 2 tham so la route va cai ham callback
+        //3. no nhay vo cai ham getListSong sau do goi ham get
+        //4. Vi cai ham get la promise nen no seco success va error.
+        // Tuy theo cach xu ly ma success minh lam j  va error minh lam j
+        //trong truong hop nay success tao se goi ham callback va truyen cai data ma cai ham get no tra ve
+        // nho la chi khi nao get chay xong co data no moi chay cai ham callback nhe
+        // goi thi se nhay vo thuc thi thoi
+        }]);
+})();
+
+exampleService{
+  .....
+  function getListSong(source, callback){
+
+    //Chỗ này cần phải khai báo 1 cái promise dạng vầy
+    var deffered = $q.deffered();  //$q cai nay inject giong thang http vay do, chi can su dung thoi
+
+    var x = $http.get(route);  // x is the promise, run dialo
+    x.then(function(data) {
+      sucess(){
+        //success se goi cai ham callback
+        calback(data);
+      }.error(){
+        //bi loi here
+      }
+
+    });
+
+  }

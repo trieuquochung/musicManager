@@ -1,0 +1,47 @@
+.song .create-song {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+}
+.song .create-song .create-form {
+  width: 50%;
+  padding: 1%;
+  margin-left: 5%;
+}
+.song .create-song .create-form .button-create-song section {
+  float: right;
+}
+.song .create-song .create-form .button-create-song section #md-button-cancel {
+  background-color: #2196f3;
+}
+.song .edit-song {
+  margin-top: 0.1em;
+  width: 100%;
+  height: 100%;
+}
+.song .edit-song .edit-form {
+  width: 50%;
+  padding: 1%;
+  margin-left: 5%;
+}
+.song .edit-song .edit-form .button-edit-song section {
+  float: right;
+}
+.song .edit-song .edit-form .button-edit-song section #md-button-cancel {
+  background-color: #2196f3 !important;
+}
+@media (max-width: 840px) {
+  .song .manage h1 {
+    font-size: 20px;
+  }
+  .song .create-song .create-form {
+    width: 80%;
+    padding: 1%;
+    margin-left: 5%;
+  }
+  .song .edit-song .edit-form {
+    width: 80%;
+    padding: 1%;
+    margin-left: 5%;
+  }
+}

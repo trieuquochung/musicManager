@@ -1,0 +1,60 @@
+<div layout="column" class="manage">
+  <div layout="row">
+    <div class="content">
+
+      <h1>Manage Playlists</h1>
+
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+
+        <div hide-xs class="button-add-delete-search" ng-if="vm.cache.searchLayout.isShowButton">
+          <md-button class="md-raised md-primary" ng-click="vm.goToCreateView()">
+            <i class="fa fa-plus-square" aria-hidden="true"></i> Add</md-button>
+
+          <md-button class="md-raised md-primary" ng-disabled="vm.isDisableDeleteButton()" ng-click="vm.showConfirm()">
+            <i class="fa fa-trash" aria-hidden="true"></i> Delete</md-button>
+
+          <md-button class="md-raised md-primary" ng-click="vm.goToSearchView()">
+            <i class="fa fa-search" aria-hidden="true"></i> Search</md-button>
+        </div>
+
+        <div hide show-xs class="icon-add-delete-search" ng-if="vm.cache.searchLayout.isShowButton">
+          <md-button ng-click="vm.goToCreateView()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+
+          <md-button ng-disabled="vm.isDisableDeleteButton()" ng-click="vm.showConfirm()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-trash fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+
+          <md-button ng-click="vm.goToSearchView()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-search fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+        </div>
+
+        <!--Search Layout-->
+        <div ng-if="vm.cache.searchLayout.isShowSearchBar" class="md-toolbar-tools search-bar">
+          <!-- Input Text -->
+          <md-input-container class="md-input-container" md-no-float>
+            <input class="search-input" type="text" placeholder='Search' ng-model="vm.cache.searchLayout.searchPlaylist"/>
+            <i class="fa fa-times fa-lg" aria-hidden="true" ng-click="vm.endSearch()" ></i>
+          </md-input-container>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+
+
+  <div class="playlist-table" table-directive
+    output="vm.outputFromTableComponent"
+    input="vm.inputToTableComponent"
+    data="vm.listPlaylist"
+    search-data="vm.cache.searchLayout.searchPlaylist"
+    column="vm.columnPlaylist"
+    selected-all-item="vm.selectedAll"
+    edit-function="vm.goToEditView"
+    delete-function="vm.showConfirmEachPlaylist"
+    show-action-column="vm.showActionColumn">
+  </div>
+</div>

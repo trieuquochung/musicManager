@@ -1,0 +1,60 @@
+<div class="edit-playlist" layout="column" flex="100">
+
+  <div class="edit-form" layout="column">
+    <h1>Edit Playlist</h1>
+    <form name="formEdit">
+    <div layout="row">
+      <md-input-container flex="50">
+        <input required name="currentPlaylist.name"
+               ng-model="vm.currentPlaylist.name"
+               ng-minlength="1"
+               ng-required="true"
+                placeholder="Playlist Name">
+        <div ng-messages="vm.currentPlaylist.$error">
+          <div ng-message="required"><p>Playlist name cannot be empty</p></div>
+        </div>
+      </md-input-container>
+    </div>
+    </br>
+
+      <div layout="row">
+        <md-input-container flex="50">
+          <input ng-model="vm.currentPlaylist.creator" placeholder="Creator">
+        </md-input-container>
+      </div>
+    </form>
+
+    <div class="buttonEditPlaylist">
+      <form>
+        <md-button class="md-raised md-primary" ng-disabled="formEdit.$invalid" ng-click="vm.savePlaylist(vm.currentPlaylist)">Save</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.goToTableView()">Cancel</md-button>
+      </form>
+    </div>
+  </div>
+
+  <div class="add-remove-song" layout="row" flex="70">
+
+    <div class="current-song-in-playlist" layout="column" flex="50" table-directive
+         output="vm.outputFromTableComponent"
+         data="vm.songsInPlaylist"
+         search-data="vm.searchPlaylist"
+         column="vm.columnSongInEditPlaylist"
+         selectedAllItem="vm.selectedAll"
+         show-action-columb="vm.showActionColumn">
+    </div>
+
+    <div>
+      <button>REMOVE</button>
+      <button>ADD</button>
+    </div>
+
+    <div class="all-song" layout="column" flex="50" table-directive
+         output="vm.outputFromTableComponent"
+         data="vm.songsNotInPlaylist"
+         search-data="vm.searchPlaylist"
+         column="vm.columnSongInEditPlaylist"
+         selectedAllItem="vm.selectedAll"
+         show-action-columb="vm.showActionColumn">
+    </div>
+  </div>
+</div>

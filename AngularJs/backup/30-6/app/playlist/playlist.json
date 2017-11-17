@@ -1,0 +1,28 @@
+[
+  {
+    "selected": false,
+    "id": 1,
+    "name": "POP",
+    "creator": "AAA",
+    "listSong": [
+      ]
+  },
+
+  {
+    "selected": false,
+    "id": 2,
+    "name": "ROCK",
+    "creator": "BBB",
+    "listSong": [
+      ]
+  },
+
+  {
+    "selected": false,
+    "id": 3,
+    "name": "COUNTRY",
+    "creator": "CCC",
+    "listSong": [
+     ]
+  }
+]

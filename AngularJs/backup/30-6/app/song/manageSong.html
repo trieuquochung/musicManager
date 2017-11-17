@@ -1,0 +1,56 @@
+<div layout="column" class="manage-song">
+  <div layout="row">
+    <div class="content">
+
+      <h1>Manage Songs</h1>
+
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+
+        <div class="button-add-delete-search" ng-hide="vm.hideButton">
+          <md-button class="md-raised md-primary" ng-click="vm.goToCreateView()">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>Add</md-button>
+
+          <md-button class="md-raised md-primary" ng-disabled="vm.isDisableDeleteButton()" ng-click="vm.showConfirm()">
+            <i class="fa fa-trash" aria-hidden="true"></i>Delete</md-button>
+
+          <md-button class="md-raised md-primary" ng-click="vm.goToSearchView()">
+            <i class="fa fa-search" aria-hidden="true"></i>Search</md-button>
+        </div>
+
+        <div class="icon-add-delete-search" ng-hide="vm.hideButton">
+          <md-button ng-click="vm.goToCreateView()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+
+          <md-button ng-disabled="vm.isDisableDeleteButton()" ng-click="vm.showConfirm()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-trash fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+
+          <md-button ng-click="vm.goToSearchView()" class="md-icon-button">
+            <md-icon aria-label=" "><i class="fa fa-search fa-2x" aria-hidden="true"></i></md-icon>
+          </md-button>
+        </div>
+
+        <div ng-hide="vm.hideSearchBar" class="md-toolbar-tools search-bar">
+          <!-- Input Text -->
+          <md-input-container class="md-input-container" md-no-float>
+            <input class="search-input" type="text" placeholder='Search' ng-model="vm.searchSong"/>
+            <i class="fa fa-times fa-lg" aria-hidden="true" ng-click="vm.endSearch()" style="margin-top: 5px"></i>
+          </md-input-container>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <div class="songs-table" table-directive
+       output="vm.outputFromTableComponent"
+       data="vm.listSong"
+       search-data="vm.searchSong"
+       column="vm.columnSong"
+       selected-all-item="vm.selectedAll"
+       edit-button="vm.goToEditView"
+       delete-button="vm.showConfirmEachSong"
+       show-action-column="vm.showActionColumn">
+  </div>
+</div>

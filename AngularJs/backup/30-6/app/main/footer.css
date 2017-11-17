@@ -1,0 +1,10 @@
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color:lightblue;
+    height: 100%;
+}
+footer a{
+  font-size:2rem;
+  text-decoration: none;
+}

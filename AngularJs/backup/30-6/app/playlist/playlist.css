@@ -1,0 +1,92 @@
+.create-playlist {
+  margin-top:0.1em;
+  width: 100%;
+  height: 100%;
+}
+
+.create-playlist .create-form{
+  width: 50%;
+  padding: 1%;
+  margin-left: 1%;
+}
+
+.create-playlist .create-form .buttonCreatePlaylist{
+  float: right;
+}
+
+.edit-playlist {
+  margin-top:0.1em;
+  width: 100%;
+  height: 100%;
+}
+
+.edit-playlist .edit-form{
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+.content{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 5px 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+.content h1{
+  display: inline;
+  float: left;
+  margin: 0 0 0 0;
+}
+.content .button-add-delete-search{
+  display: inline;
+  float: right;
+  margin: 0 0 0 0;
+}
+.manage-playlist {
+  margin-top:0.1em;
+  float:right;
+  width: 100%;
+  height: 100%;
+}
+.manage-playlist h1 {
+  display: inline;
+}
+
+.select-playlists{
+  display: inline;
+
+}
+.create-form {
+  padding: 1%;
+  margin-left: 5px;
+}
+
+/*Breadcrumb*/
+.breadcrumb {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.playlist-table{
+  /*height: 700px;*/
+  overflow: auto;
+  padding: 5px;
+}
+
+.current-song-in-playlist, .all-song{
+  height: 500px;
+  overflow: auto;
+}
+/*Responsive*/
+
+@media all and (max-width: 640px)
+{
+  .breadcrumb{
+    display: none;
+  }
+  .manage-playlist h1{
+    font-size: 20px;
+  }
+}

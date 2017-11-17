@@ -1,0 +1,50 @@
+.table-component
+  .md-api-table
+    margin-bottom 16px
+    max-width 100%
+    width 100%
+    border-spacing 0
+    border-radius 2px
+    overflow-x hidden
+    overflow-y auto
+    height 100px
+    td
+      vertical-align center
+      text-align left
+    td.description  *:first-child
+      margin-top 0
+    td.description *:last-child
+      margin-bottom 0
+
+    th
+      text-align left
+      background-color #4C9EF0
+      color white
+
+    tr:nth-child(odd)
+      td
+        background-color #E3ECF5
+    tr:nth-child(even)
+      td
+        background-color: #D1DEEC;
+    .upPointing:after
+      content '\25b2'   // BLACK UP-POINTING TRIANGLE
+
+    .downPointing:after
+      content '\25bc'   // BLACK DOWN-POINTING TRIANGLE  }
+
+    .tdCheckBox
+    .thCheckBox
+        min-width 50px
+        max-width 50px
+        width 50px
+    .md-icon
+      background-color #r3f51b5
+    .checkBox
+      text-align center
+      margin-top 12px
+    .action-column
+      max-width 100px
+      min-width 100px
+    .column-properties
+      cursor pointer

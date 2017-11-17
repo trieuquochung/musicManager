@@ -1,0 +1,39 @@
+<div layout="column" class="manage-playlist">
+  <div layout="row">
+    <div class="content">
+      <h1>Manage Playlists</h1>    <!-- ANGULAR MATERIAL-->
+      <div class="button-add-delete-search">
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+          <div ng-hide="vm.hideButton"> <!--Show or hide 3 button Add, Delete and Search-->
+            <md-button class="md-raised md-primary" ng-click="vm.goToCreateView()"><i class="fa fa-plus-square" aria-hidden="true"></i> Add</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="vm.isDisableDeleteButton()" ng-click="vm.showConfirm()"><i class="fa fa-trash" aria-hidden="true"></i> Delete</md-button>
+            <md-button class="md-raised md-primary" ng-click="vm.goToSearchView()"><i class="fa fa-search" aria-hidden="true"></i> Search</md-button>
+          </div>
+
+          <!--Search Layout-->
+          <div ng-hide="vm.hideSearchBar" class="md-toolbar-tools search-bar">
+            <!-- Input Text -->
+            <md-input-container class="md-input-container" md-no-float>
+              <input class="search-input" type="text" placeholder='Search' ng-model="vm.searchPlaylist"/>
+              <i id="iconExit" class="fa fa-times" aria-hidden="true" ng-click="vm.endSearch()"></i>
+            </md-input-container>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="playlist-table" table-directive
+    output="vm.outputFromTableComponent"
+    input="vm.inputToTableComponent"
+    data="vm.listPlaylist"
+    search-data="vm.searchPlaylist"
+    column="vm.columnPlaylist"
+    selected-all-item="vm.selectedAll"
+    edit-button="vm.goToEditView"
+    delete-button="vm.showConfirmEachPlaylist"
+    show-action-column="vm.showActionColumn"
+    detail-template="vm.detailTemplate">
+  </div>
+</div>

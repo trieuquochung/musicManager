@@ -1,0 +1,7 @@
+{
+    "directory": "src/bower_components",
+    "registry": "http://bower.herokuapp.com",
+    "proxy": "http://proxy.tma.com.vn:8080",
+    "https-proxy": "http://proxy.tma.com.vn:8080",
+    "strict-ssl": false
+}

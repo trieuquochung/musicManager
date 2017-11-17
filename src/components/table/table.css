@@ -1,0 +1,57 @@
+.table-component .md-api-table {
+  margin-bottom: 16px;
+  max-width: 100%;
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100px;
+}
+.table-component .md-api-table td {
+  vertical-align: center;
+  text-align: left;
+}
+.table-component .md-api-table td.description *:first-child {
+  margin-top: 0;
+}
+.table-component .md-api-table td.description *:last-child {
+  margin-bottom: 0;
+}
+.table-component .md-api-table th {
+  text-align: left;
+  background-color: #4c9ef0;
+  color: #fff;
+}
+.table-component .md-api-table tr:nth-child(odd) td {
+  background-color: #e3ecf5;
+}
+.table-component .md-api-table tr:nth-child(even) td {
+  background-color: #d1deec;
+}
+.table-component .md-api-table .upPointing:after {
+  content: '\25b2';
+}
+.table-component .md-api-table .downPointing:after {
+  content: '\25bc';
+}
+.table-component .md-api-table .tdCheckBox,
+.table-component .md-api-table .thCheckBox {
+  min-width: 50px;
+  max-width: 50px;
+  width: 50px;
+}
+.table-component .md-api-table .md-icon {
+  background-color: r3f51b5;
+}
+.table-component .md-api-table .checkBox {
+  text-align: center;
+  margin-top: 12px;
+}
+.table-component .md-api-table .action-column {
+  max-width: 100px;
+  min-width: 100px;
+}
+.table-component .md-api-table .column-properties {
+  cursor: pointer;
+}

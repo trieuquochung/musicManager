@@ -1,0 +1,114 @@
+.create-song {
+  margin-top:0.1em;
+  width: 100%;
+  height: 100%;
+}
+.create-song .create-form {
+  width: 50%;
+  padding: 1%;
+  margin-left: 5%;
+}
+
+.create-song .create-form .buttonCreateSong{
+  float: right;
+}
+
+.edit-song {
+  margin-top:0.1em;
+  width: 100%;
+  height: 100%;
+}
+
+.edit-song .edit-form {
+  width: 50%;
+  padding: 1%;
+  margin-left: 5%;
+}
+
+.edit-song .edit-form .buttonEditSong {
+ float: right;
+}
+
+.md-input-container {
+  position: relative;
+}
+.md-input-container i {
+  position: absolute;
+  float: right;
+}
+
+.search-input{
+  width: 30%;
+}
+.content{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 5px 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.content h1 {
+  display: inline;
+  float: left;
+  margin: 0 0 0 0;
+}
+
+.content, .button-add-delete-search, .icon-add-delete-search{
+  display: inline;
+  float: right;
+  margin: 0 0 0 0;
+}
+
+
+/*Breadcrumb*/
+.breadcrumb {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 3px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.songs-table{
+    height: 700px;
+    overflow: auto;
+    padding: 5px;
+}
+
+/*Responsive*/
+
+@media all and (max-width: 640px)
+{
+  .content .button-add-delete-search {
+    display: none;
+  }
+  .content .icon-add-delete-search{
+    display: inline;
+  }
+  .breadcrumb{
+    display: none;
+  }
+  .manage-song h1{
+    font-size: 20px;
+  }
+
+  .create-song .create-form {
+    width: 80%;
+    padding: 1%;
+    margin-left: 5%;
+  }
+
+  .edit-song .edit-form {
+    width: 80%;
+    padding: 1%;
+    margin-left: 5%;
+  }
+}
+
+@media all and (min-width: 640px)
+{
+  .content .icon-add-delete-search {
+    display: none;
+  }
+}
+

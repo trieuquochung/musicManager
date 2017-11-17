@@ -1,0 +1,17 @@
+<div>
+<md-sidenav id="leftNav" class="navigation" ng-cloak
+            md-component-id="left" hide-print="" md-is-locked-open="$mdMedia('min-width: 820px')" tabindex="-1">
+  <md-content>
+
+    <md-list class="left-nav">
+      <md-list-item ng-class="{'selectListItem': vm.mainService.selectedMenu.name === 'song' }" ng-click="vm.navigateToSong()">
+        <span>Songs</span>
+      </md-list-item>
+
+      <md-list-item ng-class="{'selectListItem': vm.mainService.selectedMenu.name === 'playlist' }" ng-click="vm.navigateToPlaylist()">
+        <span>Playlists</span>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>
+</div>

@@ -1,0 +1,41 @@
+/*Custom CSS*/
+md-sidenav.navigation > * {
+  min-width: 200px;
+}
+md-sidenav.navigation{
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+  background-color: rgb(21, 92, 164);
+  color: #fff;
+}
+
+md-list.left-nav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s
+}
+md-list.left-nav a:hover{
+  color: #6297e6;
+}
+md-list.left-nav {
+  background-color: #4285f4;
+  color:#fff;
+}
+
+md-list-item {
+  border-bottom: 1px solid #ccc;
+}
+
+md-sidenav md-content{
+  height: 100%;
+}
+
+
+md-sidenav.md-closed {
+  display: none;
+}
+

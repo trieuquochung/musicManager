@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="project">
+<head>
+  <title>Music Manager</title>
+  <base href="/">
+
+  <link rel="ICON" href="favicon.ico" type="image/ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <!-- endinject -->
+
+  <!--font-awesome-->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="app/app.css">
+  <link rel="stylesheet" href="app/home/home.css">
+  <link rel="stylesheet" href="app/main/header.css">
+  <link rel="stylesheet" href="app/navigation/navigation.css">
+  <link rel="stylesheet" href="app/playlist/playlist.css">
+  <link rel="stylesheet" href="app/song/song.css">
+  <link rel="stylesheet" href="components/breadcrumb/breadcrumb.css">
+  <link rel="stylesheet" href="components/table/table.css">
+  <link rel="stylesheet" href=".tmp/css.css">
+  <!-- endinject -->
+
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <!-- endinject -->
+
+</head>
+
+<body class="app-body" layout="column" aria-label="Music Manager">
+
+  <div class="app-header">
+    <div ng-include="'app/main/header.html' "></div>
+  </div>
+
+  <div class="app-main-content" layout="row">
+
+    <div class="app-main-content-nav" layout="column">
+      <div ng-include="'app/navigation/navigation.html'"></div>
+    </div>
+
+    <div class="app-main-content-table" flex="">
+      <md-content md-scroll-y="" layout="column">
+        <div ng-include="'app/main/content.html'"></div>
+      </md-content>
+    </div>
+
+  </div>
+
+  <div class="app-footer">
+    <div ng-include="'app/main/footer.html'"></div>
+  </div>
+
+  <!-- inject:js -->
+
+  <script src="app/app.js"></script>
+
+  <script src="app/main/header.controller.js"></script>
+
+  <script src="app/playlist/playlist.controller.js"></script>
+
+  <script src="app/playlist/playlist.service.js"></script>
+
+  <script src="app/song/song.controller.js"></script>
+
+  <script src="app/song/song.service.js"></script>
+
+  <script src="components/breadcrumb/breadcrumb.controller.js"></script>
+
+  <script src="components/breadcrumb/breadcrumb.js"></script>
+
+  <script src="components/table/table.controller.js"></script>
+
+  <script src="components/table/table.js"></script>
+
+  <script src=".tmp/templates.js"></script>
+
+  <!-- endinject -->
+</body>
+</html>

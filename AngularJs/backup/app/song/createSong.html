@@ -1,0 +1,35 @@
+<div class="create-song">
+  <div class="create-form">
+    <h1>Create Song</h1>
+    <form name="formCreate">
+        <div layout="row">
+          <md-input-container flex="100">
+            <input required name="currentSong.name"
+                   ng-model="vm.currentSong.name"
+                   ng-minlength="1"
+                   ng-required="true"
+                   placeholder="Song Name">
+              <div ng-messages="vm.currentSong.$error">
+                <div ng-message="required">
+                  <div ng-hide="vm.currentSong.name.length === 0"><p>Song name cannot be empty</p></div>
+                </div>
+              </div>
+          </md-input-container>
+          </div>
+      </br>
+
+        <div layout="row">
+          <md-input-container flex="100">
+            <input ng-model="vm.currentSong.artist" placeholder="Artist">
+          </md-input-container>
+        </div>
+    </form>
+
+    <div class="buttonCreateSong">
+      <md-button class="md-raised md-primary" ng-disabled="formCreate.$invalid" ng-click="vm.createSong(vm.currentSong)">Create</md-button>
+      <md-button style="background-color: #2196F3" class="md-raised md-primary" ng-click="vm.goToTableView()">Cancel</md-button>
+    </div>
+  </div>
+</div>
+
+

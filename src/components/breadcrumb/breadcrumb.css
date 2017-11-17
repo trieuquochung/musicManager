@@ -1,0 +1,19 @@
+
+ul.breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin-left: 5px;
+}
+ul.breadcrumb li {
+  display: inline;
+}
+ul.breadcrumb li+li:before {
+  color: #4285f4;
+  content: ">";
+}
+
+ul.breadcrumb li a {
+  color: #4285f4;
+  text-decoration: none ;
+  cursor: pointer;
+}

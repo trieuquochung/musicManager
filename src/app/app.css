@@ -1,0 +1,121 @@
+html {
+  min-width: 320px;
+  font-size: 62.5%;
+  line-height: 1.4;
+  height: 100%;
+}
+body {
+  font-size: 1.6rem;
+}
+.app-body {
+  min-width: 320px;
+  max-width: 100%;
+  overflow: auto;
+  height: 100%;
+}
+.app-header {
+  height: 70px;
+  width: 100%;
+  margin-bottom: 2px;
+  background-color: #4285f4;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.14), 0 0 2px 2px rgba(0,0,0,0.098), 0 0 5px 1px rgba(0,0,0,0.084);
+}
+.app-header a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.app-header .my-header {
+  color: #fff;
+  font-size: 30px;
+  margin: 10px 0 10px 10px;
+}
+.app-header .my-header .app-name,
+.app-header .my-header .menu-button {
+  display: inline;
+}
+.app-header .my-header .app-name span,
+.app-header .my-header .menu-button span {
+  color: #fff;
+}
+.app-header .my-header .menu-button i {
+  margin-left: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.app-main-content {
+  height: 90%;
+}
+.app-main-content .app-main-content-nav {
+  height: 100%;
+  background-color: #4285f4;
+}
+.app-main-content .app-main-content-table {
+  margin-left: 5px;
+}
+.app-main-content .app-main-content-table .breadcrumb {
+  width: 100%;
+  height: 40px;
+  line-height: 33px;
+  margin: 5px 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+.app-main-content .app-main-content-table .manage {
+  margin-top: 0.1em;
+  float: right;
+  width: 100%;
+  height: 100%;
+}
+.app-main-content .app-main-content-table .manage .playlist-table,
+.app-main-content .app-main-content-table .manage .songs-table {
+  max-height: 700px;
+  overflow: auto;
+  padding: 5px;
+}
+.app-main-content .app-main-content-table .manage .hide-error-empty-name {
+  display: none;
+}
+.app-main-content .app-main-content-table .manage .content {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 5px 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+.app-main-content .app-main-content-table .manage .content h1 {
+  display: inline;
+}
+.app-main-content .app-main-content-table .manage .content section {
+  float: right;
+}
+.app-main-content .app-main-content-table .manage .content .button-add-delete-search,
+.app-main-content .app-main-content-table .manage .content .icon-add-delete-search {
+  float: right;
+  margin: 0 0 0 0;
+}
+.app-main-content .app-main-content-table .manage .content .md-input-container {
+  position: relative;
+  margin-right: 8px;
+}
+.app-main-content .app-main-content-table .manage .content .md-input-container i {
+  position: absolute;
+  float: right;
+  margin: 5px 10px 0 0;
+  cursor: pointer;
+}
+.app-footer .my-footer {
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #c4e6e1;
+  height: 30px;
+  z-index: 2;
+}
+.app-footer .my-footer a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.app-footer .my-footer p {
+  text-align: center;
+  margin: 0;
+}
