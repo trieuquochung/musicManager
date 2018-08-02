@@ -53,7 +53,7 @@
             console.log('Cant get listSong')
           }
         );
-      var getListDeletedSong= $http.get('app/song/listDeletedSong.json')
+      var getListDeletedSong = $http.get('app/song/listDeletedSong.json')
         .then(
           function(response){
             return response.data;
